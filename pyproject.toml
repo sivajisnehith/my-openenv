@@ -16,8 +16,12 @@ dependencies = [
     "fastapi>=0.100",
     "uvicorn[standard]",
     "openai>=1.0",
-    "python-dotenv"
+    "python-dotenv",
+    "openenv-core>=0.2.0"
 ]
+
+[project.scripts]
+server = "server.app:main"
 
 [project.entry-points."openenv.environments"]
 siem-security = "environment:SIEMEnvironment"
