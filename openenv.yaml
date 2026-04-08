@@ -1,0 +1,26 @@
+name: siem-security-openenv
+version: "1.0.0"
+description: "A production-ready SIEM simulation for RL security agents."
+author: "Antigravity Senior Python Engineer"
+entry_point: "environment:SIEMEnvironment"
+tasks:
+  - id: task_1
+    name: "Detect Attacker IP"
+    difficulty: "easy"
+  - id: task_2
+    name: "Reconstruct Attack Path"
+    difficulty: "medium"
+  - id: task_3
+    name: "Stop Data Exfiltration"
+    difficulty: "hard"
+requirements:
+  - pydantic
+  - openai
+  - python-dotenv
+  - fastapi
+  - uvicorn
+tags:
+  - openenv
+  - cybersecurity
+  - soc-analyst
+  - security-automation
