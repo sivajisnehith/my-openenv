@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "siem-security-openenv"
+version = "0.1.0"
+description = "A cybersecurity SIEM simulation environment for OpenEnv"
+authors = [
+    { name = "sivajisnehith", email = "snehithsivaji@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0",
+    "fastapi>=0.100",
+    "uvicorn[standard]",
+    "openai>=1.0",
+    "python-dotenv"
+]
+
+[project.entry-points."openenv.environments"]
+siem-security = "environment:SIEMEnvironment"
