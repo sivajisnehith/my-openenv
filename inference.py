@@ -89,7 +89,7 @@ async def run_task(task):
             log_step(step=step, action=action_str, reward=reward, done=done, error=error)
             
         score = calculate_score(task.id, env)
-        success = score >= 1.0
+        success = score >= 0.9
         
     finally:
         log_end(success=success, steps=steps_taken, score=score, rewards=rewards)

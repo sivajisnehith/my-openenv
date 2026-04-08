@@ -39,10 +39,8 @@ async def step(action: Action, task_id: str = "task_1") -> Dict[str, Any]:
     env = envs[task_id]
     obs, reward, done, info = env.step(action)
     
-    # Include score in info if done
-    score = 0.0
-    if done:
-        score = calculate_score(task_id, env)
+    # Include score in response (must be strictly between 0 and 1)
+    score = calculate_score(task_id, env)
     
     return {
         "observation": obs.model_dump(),
