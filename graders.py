@@ -51,5 +51,5 @@ GRADERS = {
 def calculate_score(task_id: str, env: SIEMEnvironment) -> float:
     grader = GRADERS.get(task_id)
     if grader:
-        return grader(env)
+        return clamp_score(grader(env))
     return clamp_score(0.0)

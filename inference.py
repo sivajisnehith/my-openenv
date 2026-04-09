@@ -70,7 +70,7 @@ async def run_task(task):
     steps_taken = 0
     rewards = []
     success = False
-    score = 0.0
+    score = 0.01
     
     try:
         obs = env.reset()
